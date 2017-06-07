@@ -103,13 +103,12 @@ for block in blocks:
     link = block['href']
     if '.xlsx' in link:
         url = 'http://www.coch.nhs.uk' + link
-        print(url)
         if 'year' in url:
             csvMth = 'Y1'
             csvYr = url.split('-year-')[-1].split('-')[0]
         else:
             csvMth = 'Q0'
-            csvYr = url.split('april-')[-1].split('-')[0]
+            csvYr = '2017'
         data.append([csvYr, csvMth, url])
 
 
